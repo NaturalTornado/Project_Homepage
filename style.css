@@ -1,0 +1,150 @@
+body {
+    background-color: lightgray;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutMe {
+    grid-column: 1/3;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 4px darkgray;
+    margin: 12px;
+    padding: 8px;
+    gap: 4px;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.myName {
+    font-size: 42px;
+    font-weight: 500;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.myStuff {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.aboutContactMe {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.myWork {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+}
+
+.myWorkTitle {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.project {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 4px darkgray;
+    margin: 12px;
+    padding: 8px;
+    gap: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: 1000px;
+    min-height: 400px;
+    grid-column: span 1;
+}
+
+.projectTopScreenshot {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    background-color: lightgreen;
+}
+
+.projectLowerDescription {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.projName {
+    font-size: 18px;
+    font-weight: 300;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.links {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.projDescription {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.contactMe {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: lightblue;
+    grid-column: 1/3;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.contactInfo{
+    background-color: lightblue;
+    
+
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: lightblue;
+}
+
+@media (max-width: 1200px) {
+    .myWork {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .myWorkTitle {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+}
+
+@media (max-width: 780px) {
+    .myWork {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .project {
+        max-width: 100%;
+        grid-column: 1/2;
+    }
+
+    .myWorkTitle {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+}
